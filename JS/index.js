@@ -5,7 +5,7 @@ let solution = document.querySelector('.solution')
 let res = document.querySelector('.res')
 let signe = document.querySelector('.signe')
 let pourcentage = document.querySelector('.pourcentage')
-
+let calcul = ''
 function fixer(value) {
     let str = String(value)
     
@@ -32,23 +32,26 @@ signe.addEventListener('click' , ()=>{
 
 res.addEventListener('click' , ()=>{
     input.value = ''
+    calcul = ''
 })
 
 btn.forEach((e)=>{
     e.addEventListener('click',()=>{
         input.value += e.textContent
+        calcul +=e.textContent
     })
 })
 
 op.forEach((e)=>{
     e.addEventListener('click',()=>{
-        input.value += e.value
+        input.value += e.textContent
+        calcul += e.value
     })
 })
 
 solution.addEventListener('click' , function(){
     try{
-    let res = eval(input.value)
+    let res = eval(calcul)
     res = fixer(res)
     input.value = String(res)  
     }
