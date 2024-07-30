@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: white;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 330px;
+    border-radius: 25px;
+    padding: 1rem 1rem;
+}
+
+.container .btn {
+    margin-top: 0.7rem;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.container .btn button {
+    border-radius: 90%;
+    padding: 1rem;
+    margin: 0.4rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: 0.5s all ease;
+}
+
+.container .input {
+    width: 100%;
+    color: white;
+    text-align: end;
+    padding: 7rem 0.3rem 0rem 0;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    height: 30%;
+}
+
+.container .btn .Zero {
+  border-radius: 25px;
+  grid-column: span 2 ;
+  text-align: start;
+}
+
+.container .btn .operateur , .solution{
+    background-color: orange;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.container .input .result {
+    width: 100%;
+    text-align: end;
+    color: white;
+    background-color: black;
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+
+.container .input .result::placeholder {
+    color: white;
+}
+
+.container .btn .head-btn {
+    background-color: rgb(166, 161, 161);
+}
+
+.container .btn .nbr-btn{
+    color: white;
+    background-color: rgb(57, 55, 55);
+}
+
+.container .btn button:hover {
+    opacity: 0.6;
+}
